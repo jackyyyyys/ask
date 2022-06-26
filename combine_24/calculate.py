@@ -33,15 +33,18 @@ def plus(numbers):
             return 'OK 15 + 9'
         if ((6 in numbers) and (8 in numbers)):
             return 'OK 16 + 8'
+        else: return 'NAH'
     if (2 in numbers):
         if ((0 in numbers) and (4 in numbers)):
             return 'OK 20 + 4'
         if ((1 in numbers) and (3 in numbers)):
             return 'OK 21 + 3'
+        else: return 'NAH'
     # 9 cases
     if (8 in numbers or 9 in numbers):
         if (sum(numbers) == 24):
             return 'OK add all'
+        else: return 'NAH'
     else: return 'NAH'
 
 def main():
