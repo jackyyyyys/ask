@@ -1,4 +1,4 @@
-from ctypes import sizeof
+import time
 import calculate
 min, max = 0, 9
 nums = []
@@ -31,4 +31,16 @@ def test_plus(nums):
         print(f'{num}: {ans}')
     print(f'Success: {count_success}')
 
+def test_unsorted_random(amount = 1):
+    return 0
+
+def test_sorted_all():
+    return 0
+
+def test_specific():
+    return 0
+
+start = time.process_time()
 test_plus(all_nums())
+elapsed = time.process_time() - start
+print(f'Time Elapsed: {elapsed}')

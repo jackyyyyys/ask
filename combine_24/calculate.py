@@ -36,9 +36,18 @@ def multiply(numbers):
 
 # a bit more complicated, but later will find out no
 def minus(numbers):
-    # 2-digit - 2-digit
+    # 2-digit - 1-digit - 1-digit
 
-    # 2-digit - 1 digit
+    # 2-digit - 1-digit
+    # 24 + (anything > 6) = >30
+    # --> 6 3 0, 7 3 1, 8 3 2, 9 3 3(X)                 => 0 3 6, 1 3 7, 2 3 8 
+    # --> 0 2 4, 1 2 5, 2 2 6(X), 3 2 7, 4 2 8, 5 2 9   => 0 2 4, 1 2 5, 2 3 7, 2 4 8, 2 5 9
+    if(2 in numbers or 3 in numbers):
+        print('next')
+
+    # 2-digit - 2-digit
+    # cannot +10 -> from +11
+
     return 'NAH'
 
 # DONE
@@ -66,10 +75,15 @@ def plus(numbers):
         else: return 'NAH'
     else: return 'NAH'
 
+def calculate_unsorted(numbers):
+    return 0
+
+def calculate_sorted(numbers):
+    return 0
+
 def main():
     symbol, numbers_raw = generator.generate(symbol = FIXED_SYMBOL)
     print(symbol, numbers_raw)
-    start = time.process_time()
     numbers_sorted = sorted(numbers_raw)
     special_cases(numbers_sorted)
     if (symbol == "+"):
@@ -80,8 +94,6 @@ def main():
         ans = multiply(numbers_sorted)
     elif (symbol == "/"):
         ans = divide(numbers_sorted)
-    elapsed = time.process_time() - start
-    print(f'Time Elapsed: {elapsed}')
     print(f'Answer: {ans}')
 
-main()
+# main()
