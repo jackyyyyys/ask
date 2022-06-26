@@ -6,23 +6,42 @@ FIXED_SYMBOL = '+'
 
 def special_cases(numbers):
     if ([1, 2, 3, 4] in numbers):
-        return ''
+        # + * / OK
+        return 'OK just 1234 = ='
 
+# 24 x2{X} = 4{X}8
+# 24 x3 = 72{X}
+# 24 x4{X} = 96
+# only /3 possible
+# DONE =_=
 def divide(numbers):
-    return 'NAH'
-
-def multiply(numbers):
-    if (3 in numbers):
-        if (8 in numbers):
-            return 'OK 3 x 8'
-    if (4 in numbers):
-        if (6 in numbers):
-            return 'OK 4 x 6'
+    if (3 in numbers and 6 in numbers and 9 in numbers):
+        return 'OK 96 / 3'
     else: return 'NAH'
 
+# DONE actually so little
+def multiply(numbers):
+    # _x_x_ -> 2x3x4 -> 1 case
+    if (2 in numbers and 3 in numbers and 4 in numbers):
+        return 'OK 2 x 3 x 4'
+
+    # _x_ -> 3x8 or 4x6 -> 2 case
+    if (3 in numbers and 8 in numbers):
+        return 'OK 3 x 8'
+        
+    if (4 in numbers and 6 in numbers):
+        return 'OK 4 x 6'
+
+    else: return 'NAH'
+
+# a bit more complicated, but later will find out no
 def minus(numbers):
+    # 2-digit - 2-digit
+
+    # 2-digit - 1 digit
     return 'NAH'
 
+# DONE
 def plus(numbers):
     # 3 1-digit add up -> 1 case
     if (7 in numbers and 8 in numbers and 9 in numbers):
