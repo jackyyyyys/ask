@@ -40,7 +40,7 @@ def plus(numbers):
         if ((1 in numbers) and (3 in numbers)):
             return 'OK 21 + 3'
         else: return 'NAH'
-    # 9 cases
+    # 4 1-digit add up -> 9 cases
     if (8 in numbers or 9 in numbers):
         if (sum(numbers) == 24):
             return 'OK add all'
@@ -63,6 +63,6 @@ def main():
         ans = divide(numbers_sorted)
     elapsed = time.process_time() - start
     print(f'Time Elapsed: {elapsed}')
-    print(ans)
+    print(f'Answer: {ans}')
 
 main()
