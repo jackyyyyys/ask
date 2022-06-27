@@ -51,13 +51,17 @@ def minus(numbers):
     # 38 - 5 - 9, 38 - 6 - 8{X}, 38 - 7 - 7{X}                              3589        3 859
     # 39 - 6 - 9{X}, 39 - 7 - 8                                             3789        3 978
 
+    # 2 149 234 359
+    # 3 015 024 125 127 149 248 259 457 469 567 468 567 479 578 589 
+    if (2 in numbers or 3 in numbers):
+        print()
 
     # 2-digit - 1-digit
     # 24 + (anything > 6) = >30
     # --> 6 3 0, 7 3 1, 8 3 2, 9 3 3(X)                 => 0 3 6, 1 3 7, 2 3 8 
     # --> 0 2 4, 1 2 5, 2 2 6(X), 3 2 7, 4 2 8, 5 2 9   => 0 2 4, 1 2 5, 2 3 7, 2 4 8, 2 5 9
     if(2 in numbers or 3 in numbers):
-        print('next')
+        print()
 
     # 2-digit - 2-digit
     # cannot +10 +11 -> from +12
